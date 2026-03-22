@@ -1,0 +1,17 @@
+{
+    "1" : {
+        "name": "Apple",
+        "price": 64.5,
+        "discount": 10
+    },
+    "2" : {
+        "name": "Orange",
+        "price": 55,
+        "discount": 12
+    },
+    "3" : {
+        "name": "Gauva",
+        "price": 55,
+        "discount": 12
+    }
+}
