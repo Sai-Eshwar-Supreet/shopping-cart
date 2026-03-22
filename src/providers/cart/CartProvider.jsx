@@ -6,9 +6,12 @@ function CartProvider({children}){
     const [cart, setCart] = useState({});
 
     function updateCart(id, count){
-        if(!Number.isInteger(count) || count <= 0){
+        if(!Number.isInteger(count)){
             return;
         }
+
+        count = Math.max(1, Math.min(100, count));
+
         setCart(prev => ({...prev, [id]: count}));
     }
 
