@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    padding: var(--space-medium);
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-small);
+
+    box-shadow: var(--shadow-lift-regular);
+}
+
+.title{
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-semi);
+}
+
+.tab-container{
+    display: flex;
+    gap: var(--space-small);
+
+    justify-content: flex-end;
+
+    margin-left: auto;
+}
+
+.tab{
+    font-size: var(--font-size-normal);
+
+    text-decoration: none;
+    color: black;
+    min-width: min(80px);
+    
+    text-align: center;
+    
+    padding: var(--space-small) var(--space-medium);
+}
+
+.tab.active{
+    border-bottom: 1px solid red;
+}
+
+.badge{
+    font-size: var(--font-size-tiny);
+
+    padding: var(--space-small) var(--space-medium);
+    border-radius: var(--radius-small);
+
+    background-color: var(--color-accent);
+    color: white;
+}
