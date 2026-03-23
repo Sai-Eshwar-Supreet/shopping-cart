@@ -3,7 +3,6 @@ import App from './App.jsx';
 import Cart from './pages/Cart.jsx';
 import Product from './pages/Product.jsx';
 import Shop from "./pages/Shop.jsx";
-import Home from "./pages/Home.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 
 export const routes = createBrowserRouter([
@@ -24,6 +23,10 @@ export const routes = createBrowserRouter([
         path: 'product/:id',
         element: <Product />
       },
+      {
+        path: '*',
+        element: <ErrorPage />
+      }
     ]
   }
 ])
