@@ -31,7 +31,10 @@ function CartProvider({children}){
         return {...cart};
     }
 
-    function getCount(){
+    function getCount(id){
+        return cart[id] ?? 0;
+    }
+    function getTotalCount(){
         return Object.values(cart).reduce((prev, current) => prev + current, 0)
     }
 
@@ -39,7 +42,7 @@ function CartProvider({children}){
         return Number.isInteger(cart[id]);
     }
 
-    return <CartContext.Provider value={{updateCart, removeFromCart, getCartItems, getCount, isInCart}}>
+    return <CartContext.Provider value={{updateCart, removeFromCart, getCartItems, getTotalCount, getCount, isInCart}}>
         {children}
     </CartContext.Provider>
 }

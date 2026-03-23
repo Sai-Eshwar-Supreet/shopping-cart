@@ -2,7 +2,7 @@ import styles from '../styles/Footer.module.css';
 
 function Footer(){
     return <footer className={styles.footer}>
-        2026 © Shopping app name
+        2026 © Fake store
       </footer>
 }
 
