@@ -1,21 +1,21 @@
 import { Link } from "react-router";
 import { useProducts } from "../providers/products/useProducts";
 
+import styles from '../styles/Home.module.css';
+
 function Home(){
     const products = useProducts();
-    return <>
-        <h2>Home</h2>
-        <ul>
-            {Object.entries(products).map(([id, product]) => {
+    return <ul className={styles['card-grid']}>
+            {products.map(({id, title, price, category, image}) => {
                 return <li key={id}>
-                    <h3>{product.name}</h3>
-                    <p><s>{product.price}</s></p>
-                    <p>{(product.price * (1 - (product.discount  / 100))).toFixed(2)}</p>
+                    <h3>{title}</h3>
+                    <p>{price}</p>
+                    <p>{category}</p>
+                    <img src={image} alt="Product image" />
                     <Link to={`/product/${id}`}>More</Link>
                 </li>
             })}
         </ul>
-    </>
 }
 
 export default Home;

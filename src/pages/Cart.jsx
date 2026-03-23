@@ -7,21 +7,18 @@ function buildCartData(all, cart){
     const list = [];
     let total = 0;
     for(let [id, count] of Object.entries(cart)){
-        const product = all[id];
+        const product = all.find(item => item.id === parseInt(id));
         
         if(!product){
             throw new Error('Product in the cart is not a valid product');
         }
+        total += product.price;
 
-        const unitPrice = (product.price * (1 - product.discount / 100));
-        const price = (unitPrice * count);
-        total += price;
         const data = {
             id,
-            name: product.name,
+            title: product.title,
             count,
-            unitPrice,
-            price,
+            price : product.price,
         }
 
         list.push(data);
@@ -41,7 +38,7 @@ function Cart(){
         <ul>
             {list.map(item => {
                 return <li key={item.id}>
-                    <p>{item.name} x {item.count} | {item.unitPrice.toFixed(2)} x {item.count} | {item.price.toFixed(2)}</p>
+                    <p>{item.title} x {item.count} | {item.price.toFixed(2)}</p>
                     <CountField value={item.count} handleChange={ (value) => cart.updateCart(item.id, value) } />
                     <button onClick={() => cart.removeFromCart(item.id)} >Delete</button>
                 </li>
