@@ -7,7 +7,7 @@ function buildCartData(all, cart){
     const list = [];
     let total = 0;
     for(let [id, count] of Object.entries(cart)){
-        const product = all.find(item => item.id === id);
+        const product = all.find(item => item.id === parseInt(id));
         
         if(!product){
             throw new Error('Product in the cart is not a valid product');

@@ -1,38 +1,29 @@
-.details{
-    display: flex ;
-    flex-direction: column;
-    flex-wrap: wrap;
+.card{
+    width: min(500px, 100%);
 
-    align-items: flex-start;
-}
+    padding: var(--space-medium);
 
-.header{
     display: flex;
     flex-direction: column;
-    gap: var(--space-small);
 
-    margin-bottom: var(--space-medium);
-}
+    justify-content: center;
+    align-items: stretch;
+    border-radius: var(--radius-small);
 
-.title{
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-semi);
+    overflow: hidden;
+
+    height: 100%;
+
+    margin: auto;
 }
 
 .image{
-    width: min(500px, 100%);
-    height: 400px;
+    margin: var(--space-medium) auto;
+
+    width: 100%;
+    height: 200px;
     object-fit: contain;
-
-    padding: var(--space-medium) var(--space-extreme);
 }
-
-.details-container{
-    display: flex;
-
-    border-radius: var(--radius-small);
-}
-
 
 .info-container{
     background-color: white;
@@ -41,11 +32,17 @@
     display: flex;
     flex-direction: column;
 
+    justify-content: space-between;
+
     border-radius: var(--radius-small);
-    box-shadow: -8px 0 12px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -8px 12px 0 rgba(0, 0, 0, 0.08);
 
     padding: var(--space-small);
     gap: var(--space-small);
+}
+
+.title{
+    font-weight: var(--font-weight-semi);
 }
 
 .category{
@@ -62,8 +59,38 @@
 
 .price{
     padding: var(--space-small);
-
-    font-size: var(--font-size-large);
     font-weight: var(--font-weight-semi);
 }
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-small);
+
+    align-items: center;
+
+    text-decoration: none;
+    
+    text-align: center;
+}
+
+.input-container > *{
+    flex: 1;
+}
+
+.delete, .add{
+    padding: var(--space-small) var(--space-medium);
+
+    border-radius: var(--radius-small);
+}
+
+.delete{
+    border: 1px solid var(--color-danger);
+    background-color: var(--color-neutral-100);
+    color: var(--color-danger);
+}
+.delete:hover{
+    background-color: var(--color-danger);
+    color: var(--color-neutral-100);
+}

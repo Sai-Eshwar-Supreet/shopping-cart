@@ -1,0 +1,25 @@
+.count-field{
+    display: flex;
+
+    align-items: center;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+
+}
+
+.btn > svg{
+    color: var(--color-neutral-600);
+}
+
+.btn:hover > svg{
+    color: var(--color-accent);
+}
+
+.count-field > input{
+    border-radius: var(--space-small);
+    height: 40px;
+    padding: var(--space-small);
+}
