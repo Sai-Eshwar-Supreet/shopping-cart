@@ -9,7 +9,7 @@ function Header(){
     return <header className={styles.header}>
         <h1 className={styles.title}>Fake store</h1>
         <nav className={styles['tab-container']}>
-            <NavLink to='/' className={({isActive}) => isActive ? `${styles.tab} ${styles.active}`: `${styles.tab}`}>Home</NavLink>
+            <NavLink to='/' className={({isActive}) => isActive ? `${styles.tab} ${styles.active}`: `${styles.tab}`}>Shop</NavLink>
             <NavLink to='/cart' className={({isActive}) => isActive ? `${styles.tab} ${styles.active}`: `${styles.tab}`}>Cart <span className={styles.badge}>{count}</span></NavLink>
         </nav>
       </header>

@@ -29,6 +29,8 @@
 .tab{
     font-size: var(--font-size-normal);
 
+    font-weight: var(--font-weight-semi);
+
     text-decoration: none;
     color: black;
     min-width: min(80px);
@@ -39,15 +41,17 @@
 }
 
 .tab.active{
-    border-bottom: 1px solid red;
+    border-bottom: 4px solid var(--color-accent);
 }
 
 .badge{
-    font-size: var(--font-size-tiny);
+    font-size: var(--font-size-small);
 
-    padding: var(--space-small) var(--space-medium);
+    padding: 4px 8px;
     border-radius: var(--radius-small);
 
     background-color: var(--color-accent);
     color: white;
+
+    margin-left: var(--space-small);
 }

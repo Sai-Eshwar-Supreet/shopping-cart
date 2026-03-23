@@ -1,4 +1,7 @@
 .card{
+    text-decoration: none;
+    color: inherit;
+
     background-color: var(--color-neutral-200);
     border: var(--color-neutral-200);
 
@@ -14,14 +17,48 @@
     overflow: hidden;
 
     height: 100%;
+
+    position: relative;
+    
+    transition: transform 0.2s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.badge{
+    position: absolute;
+    
+    transform-origin: top left;
+
+    top: 0;
+    left: 0;
+
+    transform: translate(10px, 10px);
+
+    font-size: var(--font-size-small);
+
+    padding: var(--space-small) var(--space-medium);
+
+    border-radius: var(--radius-small);
+
+    background-color: var(--color-neutral-100);
+}
+
+.image-container{
+    overflow: hidden;
 }
 
 .image{
-    margin: var(--space-small) auto;
-
     width: 200px;
     height: 200px;
+
+    margin: var(--space-small) auto;
+
     object-fit: contain;
+
+    transition: transform 0.2s ease;
 }
 
 .info-container{

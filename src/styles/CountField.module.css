@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.count-field > *{
+    flex: 1;
+}
+
 .btn{
     background-color: transparent;
     border: none;

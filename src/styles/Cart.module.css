@@ -1,0 +1,133 @@
+.cart{
+    padding: var(--space-medium);
+
+}
+
+.header{
+    font-size: var(--font-size-large);
+
+    margin-bottom: var(--space-medium);
+}
+
+.image{
+    width: 80px;
+    height: 80px;
+    
+    object-fit: contain;
+}
+
+
+.container{
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    gap: var(--space-medium);
+}
+
+.cart-container{
+    min-width: min(1000px, 100%);
+}
+.purchase-container{
+    min-width: min(300px, 100%);
+}
+
+.cart-container, .purchase-container{
+    display: flex;
+    flex-direction: column;
+    
+    gap: var(--space-medium);
+}
+
+.item{
+    position: relative;
+
+    box-shadow: var(--shadow-lift-regular);
+    
+    background-color: white;
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    
+    align-items: center;
+    
+    gap: var(--space-medium);
+    
+    padding: var(--space-medium);
+    
+    border-radius: var(--radius-small);
+}
+
+.item > *{
+    flex: 1;
+}
+
+.item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.title{
+    text-wrap: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price, .count{
+    width: 100px;
+}
+
+.cta{
+    padding: var(--space-small) var(--space-medium);
+    border-radius: var(--radius-small);
+
+    background-color: var(--color-accent);
+
+    border: none;
+
+    color: var(--color-neutral-100);
+}
+
+.cta:hover{
+    background-color: var(--color-neutral-100);
+
+    border: 1px solid var(--color-accent);
+
+    color: var(--color-accent);
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%);
+
+    max-width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete > svg{
+    max-width: 40px;
+    height: 40px;
+    color: red;
+}
+.delete:hover > svg{
+    transform: scale(1.1);
+}
+
+.total{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semi);
+}
