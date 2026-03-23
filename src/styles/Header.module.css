@@ -1,4 +1,5 @@
 .header{
+    background-color: var(--color-neutral-100);
     display: flex;
     padding: var(--space-medium);
 
@@ -8,7 +9,7 @@
 
     gap: var(--space-small);
 
-    box-shadow: var(--shadow-lift-regular);
+    box-shadow: var(--shadow-lift-light);
 }
 
 .title{
